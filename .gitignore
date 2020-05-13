@@ -1,7 +1,8 @@
 node_modules/**/*
 .vscode
 dist/
-# .env <-- later
+# Now do never push .env again !
+.env
 
 # Optional npm/yarn cache directory
 .npm
