@@ -1,0 +1,10 @@
+{
+	"elearningUrl": "https://elearning.u-pem.fr/calendar/export_execute.php?userid=32400&authtoken=6021f332fd030f87d9ded29c9ed6d2b7f47f66d2&preset_what=all&preset_time=recentupcoming",
+	"icalLocation": "ical.ics",
+	"signUrl": "https://elearning.u-pem.fr/mod/attendance/view.php?id=154410",
+	"SERVER_ID": "495279571168657416",
+	"CHANNEL_ID": "634813355336531997",
+	"CHECK_SIGN": "✅",
+	"CLOWN": "🤡",
+	"ADMINS": ["204255678783684609", "376773314766569475"]
+}

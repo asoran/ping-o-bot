@@ -1,0 +1,18 @@
+node_modules/**/*
+.vscode
+dist/
+# .env <-- later
+
+# Optional npm/yarn cache directory
+.npm
+.yarn/cache
+# Optional eslint cache
+.eslintcache
+
+# Don't push npm pack please
+*.zip
+
+# OSX :)
+.DS_Store
+.Spotlight-V100
+.Trashes
