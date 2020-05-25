@@ -146,8 +146,8 @@ client.on('message', async msg => {
 		return;
 	}
 	
-	if(msg.startsWith('.roll')) {
-		const [m, n, lim] = /(\d)?d(\d*)/gm.exec(msg.content.split(' ').slice(1)) || [null, null, null];
+	if(msg.content.startsWith('.roll')) {
+		const [m, n, lim] = /(\d)?d(\d*)/gm.exec(msg.content.split(' ').slice(1)[0]) || [null, null, null];
 		if(lim) {
 			msg.reply(new Array(+n || 1).fill(lim).map(x => Math.floor(Math.random() * x) + 1));
 		} else {
