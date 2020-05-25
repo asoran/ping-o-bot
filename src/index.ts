@@ -39,11 +39,11 @@ function saveData(): boolean {
 	return true;
 }
 
-let quotes: string[] = [];
+let norris: string[] = [];
 
 function loadQuotes(): boolean {
-	const qts = readFileSync('./quotes.txt').toString();
-	quotes = qts.split('\n');
+	const qts = readFileSync('./norris.txt').toString();
+	norris = qts.split('\n');
 	return true;
 }
 
@@ -225,9 +225,11 @@ client.on('message', async msg => {
 			return `[${dateToString(start)}] to [${dateToString(end)}] (${ev.name})`;
 		}).join('\n'));
 		break;
-	case '.quote':
+	case '.norris':
 		// Pour toi Guillaume :p
-		msg.reply(quotes[Math.floor(Math.random() * quotes.length)]);
+		// Extracted from: https://www.chucknorrisfacts.fr/facts/top
+		// Via: [...document.querySelectorAll('.factbody')].map(x => x.innerText.trim().split('\nVotez')[0]).join('\n')
+		msg.reply(norris[Math.floor(Math.random() * norris.length)]);
 		break;
 	// help
 	case '.help':
