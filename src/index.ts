@@ -145,6 +145,15 @@ client.on('message', async msg => {
 		}
 		return;
 	}
+	
+	if(msg.startsWith('.roll')) {
+		const [m, n, lim] = /(\d)?d(\d*)/gm.exec(msg.content.split(' ').slice(1)) || [null, null, null];
+		if(lim) {
+			msg.reply(new Array(+n || 1).fill(lim).map(x => Math.floor(Math.random() * x) + 1));
+		} else {
+			msg.reply('Syntax [nb]dX, avec nb = nombre de lancé, et dX le dé');
+		}
+	}
 
 	// !\ DEBUGGING PURPOSE, DO NOT DO THIS AT HOME /!\\
 	if(msg.channel.type === 'dm') {
